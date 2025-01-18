@@ -1,0 +1,7 @@
+(1,a)=1
+
+final_state=[1]
+
+initial_state=1
+
+user_input_string=a
