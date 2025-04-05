@@ -1,42 +1,37 @@
-% DFA to REGEX
-% This project converts a Deterministic Finite Automaton (DFA) to a Regular Expression (REGEX).
+# DFA to REGEX
 
-% Short Description:
-% This project takes a DFA as input and converts it into a Regular Expression using standard algorithms. 
-% It is useful for simplifying DFAs into regular expressions for easier processing.
+## Project Description
+This project converts a Deterministic Finite Automaton (DFA) into a Regular Expression (REGEX). The DFA is represented as a set of state transitions, and the corresponding regular expression is generated based on these transitions.
 
-% Features:
-% - Accepts a DFA in the specified format.
-% - Converts the DFA into an equivalent regular expression.
-% - Checks whether a given input string is accepted by the DFA.
-% - Provides the corresponding regular expression for the DFA.
+## Features
+- Converts DFA state transitions to a regular expression.
+- Handles any DFA with multiple states and input symbols.
+- Supports both basic and complex DFA structures.
 
-% Input Format:
-% The DFA is represented as a set of transitions and a start state.
-% Transitions are given in the format (current_state, input_symbol) = next_state.
-% The final state(s) are also specified in the final_state array.
-% The initial state is indicated by the initial_state variable.
-% Example:
-% (1,a)=2
-% (2,b)=3
-% (3,c)=4
-% (4,c)=4
-% (4,a)=2
+## Input Format
+The input for this project follows the format below:
 
-final_state=[4];
+- The state transitions are defined in the form `(state, symbol) = next_state`, where `state` is the current state, `symbol` is the input symbol, and `next_state` is the state reached after processing the symbol.
 
-initial_state=1;
+Example:
+(1,a)=2 (2,b)=3 (3,c)=4 (4,c)=4 (4,a)=2
+ 
+final_state=[4]
 
-user_input_string='abcabc';
+initial_state=1
 
-% Output Format:
-% The output will include the corresponding regular expression and whether the input string is accepted by the DFA.
-% The regular expression for the given DFA will be displayed as well.
-% Example:
-% #REGEX
-% (a)*
+user_input_string=abcabc
 
-% string accepted
 
-% Usage:
-% Run the code to convert the DFA into a regular expression and check if the user input string is accepted.
+## Output Format
+The output will be the regular expression corresponding to the DFA. It will be followed by a message indicating whether the input string is accepted by the DFA.
+
+Example output:
+
+#REGEX
+
+(a)*
+
+string accepted
+
+
